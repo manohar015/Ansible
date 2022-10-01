@@ -119,3 +119,10 @@ ansible-playbook 13-tags.yml  -t web
 
 ### Test Commits for the ansible-pull 
 Ansible pull needs ansible to installed and ensure version6 is the installed version
+
+
+# How to create an AMI with ANSIBLE ?
+1) Launch the machine with our lab image 
+2) Install ansible with curl command
+3) Once Installed , make an AMI and ensure that comes to available state 
+4) Going forward for all the machines that needs needs ansible use this AMI.
