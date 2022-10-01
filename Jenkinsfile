@@ -24,7 +24,7 @@ pipeline {
         stage('Main') {            // Runs only when it's a PR 
             steps {
                 sh "env"
-                sh "echo"           
+                sh "echo I am Main Branch"           
             }
         }
 
