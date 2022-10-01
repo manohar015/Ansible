@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Hai') {
+        stage('Do a Dry-Run') {
             steps {
                 sh "echo ${ENV_URL} "  
                     
