@@ -14,3 +14,6 @@ pipeline {
         }
     }
 }
+
+// SSH_CRED_USR
+// SSH_CRED_PSW
