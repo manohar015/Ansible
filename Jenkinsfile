@@ -21,13 +21,13 @@ pipeline {
             }
         }
 
-        stage('Main') {            // Runs only when it's a PR 
+        stage('Main') {   
+            when { branch 'main' }         // Runs only when it's a PR 
             steps {
                 sh "env"
                 sh "echo I am Main Branch"           
             }
         }
-
     }
 }
 
