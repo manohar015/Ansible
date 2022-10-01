@@ -22,7 +22,7 @@ pipeline {
         }
 
         stage('Main') {   
-            when { branch 'main' }         // Runs only when it's a PR 
+            when { branch 'main' }         // Runs only when it's a PR .dd
             steps {
                 sh "env"
                 sh "echo I am Main Branch"           
