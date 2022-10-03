@@ -26,11 +26,8 @@ pipeline {
             when { branch 'main' }         // Runs only when it's a PR .dd
             steps {
                 sh "env"
-                sh "echo I am Main Branch"           
+                sh "echo I am Running Against The Main Branch"           
             }
         }
     }
 }
-
-// SSH_CRED_USR
-// SSH_CRED_PSW
