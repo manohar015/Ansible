@@ -28,8 +28,7 @@ pipeline {
                 }     // Runs only when it's a PR .dd
             steps {
                 sh "env"
-                sh "echo I am running against a TAG"           
-                sh "echo I am Running Against The Main Branch"           
+                sh "echo I am running against a TAG"                
             }
         }
     }
