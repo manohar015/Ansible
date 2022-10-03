@@ -24,7 +24,7 @@ pipeline {
 
         stage('TAG') {   
             when { 
-                expression { TAG_NAME != null }        // Checking whether the value of TAG_NAME is null or not
+                expression { env.TAG_NAME != null }        // Checking whether the value of TAG_NAME is null or not
                 }    
             steps {
                 sh "echo I am running against a TAG"                
