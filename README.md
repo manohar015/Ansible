@@ -126,3 +126,4 @@ Ansible pull needs ansible to installed and ensure version6 is the installed ver
 2) Install ansible with curl command and also install boto : $ sudo pip3 install boto
 3) Once Installed , make an AMI and ensure that comes to available state 
 4) Going forward for all the machines that needs needs ansible use this AMI.
+5) Which will be having ANSIBLE installed on it.
