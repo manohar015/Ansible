@@ -28,11 +28,12 @@ pipeline {
                 }     // Runs only when it's a PR .dd
             steps {
                 sh "env"
+<<<<<<< HEAD
                 sh "echo I am running against a TAG"           
+=======
+                sh "echo I am Running Against The Main Branch"           
+>>>>>>> 83adc87d7f9ee7f2308d7d3c5794d98542c9a554
             }
         }
     }
 }
-
-// SSH_CRED_USR
-// SSH_CRED_PSW
