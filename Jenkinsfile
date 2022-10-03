@@ -25,7 +25,7 @@ pipeline {
         stage('TAG') {   
             when { 
                 expression { TAG_NAME != null }        // Checking whether the value of TAG_NAME is null or not
-                }     // Runs only when it's a PR .dd
+                }    
             steps {
                 sh "echo I am running against a TAG"                
             }
