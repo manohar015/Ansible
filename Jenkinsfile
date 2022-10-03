@@ -23,7 +23,7 @@ pipeline {
         }
 
         stage('Main') {   
-            when { expression {  }         // Runs only when it's a PR .dd
+            when { expression { TAG_NAME ==  }         // Runs only when it's a PR .dd
             steps {
                 sh "env"
                 sh "echo I am Main Branch"           
