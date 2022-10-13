@@ -17,6 +17,7 @@
     path: "{{APP_LOCATION}}"
     state: directory
   ignore_errors: yes 
+  become_user: "{{APPUSER}}"
 
 # Downloads the package from NEXUS
 - name: Download and extract {{COMPONENT}}
