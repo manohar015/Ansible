@@ -9,7 +9,7 @@
 - name: Download and extract {{COMPONENT}}
   ansible.builtin.unarchive:
     src: http://172.31.0.75:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
-    dest: /tmp 
+    dest:  
     remote_src: yes 
 
 - name: Cleanup of old component 
