@@ -44,9 +44,9 @@
 #     remote_src: yes
 #   become_user: "{{APPUSER}}"
 
-- name: Install NodeJS packages based on package.json file 
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/  
+# - name: Install NodeJS packages based on package.json file 
+#   community.general.npm:
+#     path: /home/{{APPUSER}}/{{COMPONENT}}/  
 
 # - name: Coping systemd file 
 #   ansible.builtin.copy:
