@@ -5,13 +5,17 @@
 #     dest: /tmp 
 #     remote_src: yes 
 
-- name: create App Location: 
   
-
 - name: Cleanup of old component 
   ansible.builtin.file:
     path: "{{APP_LOCATION}}"
     state: absent
+  ignore_errors: yes 
+
+- name: Creating App Location 
+  ansible.builtin.file:
+    path: "{{APP_LOCATION}}"
+    state: direct
   ignore_errors: yes 
 
 # Downloads the package from NEXUS
