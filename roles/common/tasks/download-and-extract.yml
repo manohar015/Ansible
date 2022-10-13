@@ -5,6 +5,13 @@
 #     dest: /tmp 
 #     remote_src: yes 
 
+
+- name: Cleanup of old component 
+  ansible.builtin.file:
+    path: "{{APP_LOCATION}}"
+    state: absent
+  ignore_errors: yes 
+
 # Downloads the package from NEXUS
 - name: Download and extract {{COMPONENT}}
   ansible.builtin.unarchive:
@@ -12,11 +19,6 @@
     dest: "{{APP_LOCATION}}"
     remote_src: yes 
 
-- name: Cleanup of old component 
-  ansible.builtin.file:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
-    state: absent
-  ignore_errors: yes 
 
 # Uncomment this only for download the code from nexus
 # - name: Coping {{COMPONENT}} to {{APPUSER}}
