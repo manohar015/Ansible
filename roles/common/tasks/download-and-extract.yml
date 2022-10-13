@@ -15,7 +15,7 @@
 - name: Creating App Location 
   ansible.builtin.file:
     path: "{{APP_LOCATION}}"
-    state: direct
+    state: directory
   ignore_errors: yes 
 
 # Downloads the package from NEXUS
