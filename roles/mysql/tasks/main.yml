@@ -8,6 +8,7 @@
     name: 
       - mysql-community-server
       - MySQL-python
+      - PyMySQL
     state: present 
   
 - name: Starting {{COMPONENT}} Service 
