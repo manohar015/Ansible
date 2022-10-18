@@ -6,9 +6,10 @@
 - name: Installing {{COMPONENT}}
   ansible.builtin.yum:
     name: 
-      - mysql-community-server
-      - MySQL-python
-      - PyMySQL
+    - mysql-community-devel
+    - mysql-community-server
+    - gcc
+    - python36-devel
     state: present 
   
 - name: Starting {{COMPONENT}} Service 
