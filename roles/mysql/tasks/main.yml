@@ -3,27 +3,20 @@
     src: mysql.repo 
     dest: /etc/yum.repos.d/mongodb.repo  
 
+
 # Changed, added python36-devel
 - name: Installing {{COMPONENT}}
   ansible.builtin.yum:
     name: 
-    - mysql-community-devel
-    - mysql-community-server
-    - gcc
-    - python36-devel
-    - MySQL-python
-    state: present 
+     - mysql-community-server
+     - MySQL-python
+    state: installed 
 
-# Added :
-- name: Installing pip3 mysqlclient
-  ansible.builtin.pip:
-    name: pip3-mysqlclient
-    executable: pip3
   
 - name: Starting MySQL Service
   ansible.builtin.systemd:
     name: mysqld
-    state: started
+    state: restarted
     enabled: yes
 # This has to fetch the password only when the default password is not changed
 
