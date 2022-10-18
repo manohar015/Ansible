@@ -3,6 +3,7 @@
     src: mysql.repo 
     dest: /etc/yum.repos.d/mongodb.repo  
 
+# Changed, added python36-devel
 - name: Installing {{COMPONENT}}
   ansible.builtin.yum:
     name: 
@@ -11,6 +12,12 @@
     - gcc
     - python36-devel
     state: present 
+
+# Added :
+- name: Installing pip3 mysqlclient
+  ansible.builtin.pip:
+    name: pip3-mysqlclient
+    executable: pip3
   
 - name: Starting {{COMPONENT}} Service 
   ansible.builtin.service:
