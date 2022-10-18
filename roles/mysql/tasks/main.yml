@@ -3,14 +3,16 @@
     src: mysql.repo 
     dest: /etc/yum.repos.d/mongodb.repo  
 
-
-# Changed, added python36-devel
 - name: Installing {{COMPONENT}}
   ansible.builtin.yum:
     name: 
      - mysql-community-server
      - MySQL-python
     state: installed 
+
+# Added as Schema Load Needs PyMySQL
+- name: Installing PyMySQL
+  ansible.builtin.shell: pip3 install PyMySQL
 
   
 - name: Starting MySQL Service
