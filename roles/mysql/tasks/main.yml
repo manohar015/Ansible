@@ -13,7 +13,6 @@
 # Added as Schema Load Needs PyMySQL
 - name: Installing PyMySQL
   ansible.builtin.shell: pip3 install PyMySQL
-
   
 - name: Starting MySQL Service
   ansible.builtin.systemd:
