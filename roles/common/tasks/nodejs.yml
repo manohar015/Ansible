@@ -1,13 +1,13 @@
 - name: Configure the Yum Repos 
-  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash  
+  ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
 
 - name: Install NodeJS 
-  ansible.builtin.shell: yum install nodejs gcc-c++ -y --skip-broken
-  #   name: "{{item}}"
-  #   state: present  
-  # loop: 
-  #   - nodejs 
-  #   - gcc-c++  
+  ansible.builtin.yum:
+    name: "{{item}}"
+    state: present  
+  loop: 
+    - nodejs 
+    - gcc-c++  
   
 # - name: Creating application user
 #   ansible.builtin.user:
