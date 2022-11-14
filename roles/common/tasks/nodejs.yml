@@ -21,9 +21,11 @@
 
 - name: Download mongodb pem file
   ansible.builtin.get_url:
-    url: 
-    dest: /etc/foo.conf
+    url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    dest: /home/roboshop/
     mode: '0440'
+    owner: roboshop 
+    group: roboshop
 
 - name: Cleanup of old component 
   ansible.builtin.file:
