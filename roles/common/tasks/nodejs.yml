@@ -19,6 +19,8 @@
     name: common 
     tasks_from: create-user
 
+
+
 - name: Cleanup of old component 
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
