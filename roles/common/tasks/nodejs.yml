@@ -19,7 +19,11 @@
     name: common 
     tasks_from: create-user
 
-
+- name: Download mongodb pem file
+  ansible.builtin.get_url:
+    url: 
+    dest: /etc/foo.conf
+    mode: '0440'
 
 - name: Cleanup of old component 
   ansible.builtin.file:
