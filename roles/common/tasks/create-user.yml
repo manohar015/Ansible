@@ -4,8 +4,8 @@
     comment: Roboshop Application User
   register: APPUSER_REGISTER
 
-
-
-# - name: test 
-#   debug:
-#    msg: "{{APPUSER_REGISTER}}"
+- name: Installing python boto modules
+  ansible.builtin.pip:
+    name:
+      - boto3 
+      - botocore
