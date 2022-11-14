@@ -9,3 +9,4 @@
     name:
       - boto3 
       - botocore
+    executable: pip3  # Then installation will happen with pip3. If not, goes with python 2 by default.
