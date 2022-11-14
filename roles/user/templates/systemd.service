@@ -5,6 +5,7 @@ User=roboshop
 Environment=MONGO=true
 Environment=REDIS_HOST=redis-{{ENV}}.roboshop.internal
 Environment=MONGO_URL="mongodb://mongodb-{{ENV}}.roboshop.internal:27017/users"
+Environment
 ExecStart=/bin/node /home/roboshop/user/server.js
 SyslogIdentifier=user
 
