@@ -5,7 +5,7 @@ filebeat.inputs:
   json.keys_under_root: true
 {% endif %}
   paths:
-    - /var/log/cart.log
+    - "{{LOGLOCATION}}"
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
