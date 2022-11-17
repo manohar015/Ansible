@@ -7,3 +7,7 @@
   ansible.builtin.systemd:
     name: logstash    
     state: restarted
+
+# Whenever you restart a logstash, it will lot of time to come up and validation part that logstash is up is it's port number 
+# 5044 should be in the listening state. So, this playbook has to wait till that port 5044 comes up and once that comes up, then only
+# we can say that this task is completed. If not, logstash is having issue.
