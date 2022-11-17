@@ -31,7 +31,17 @@
     src: roboshop.conf 
     dest: /etc/nginx/default.d/roboshop.conf
   notify: Restarting Nginx Service 
-  
+
+- name: Configuing rsyslog
+  ansible.builtin.include_role:
+    name: elk  
+    tasks_from: rsyslog
+
+- name: Installing Filebeat
+  ansible.builtin.include_role:
+    name: elk 
+    tasks_from: filebeat
+
 - name: Configuing system name 
   ansible.builtin.include_role:
     name: common 
