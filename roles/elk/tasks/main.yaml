@@ -5,5 +5,5 @@
   
 - name: Restarting logstash 
   ansible.builtin.systemd:
-    name: rsyslog   
+    name: logstash    
     state: restarted
