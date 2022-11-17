@@ -1,12 +1,9 @@
 filebeat.inputs:
 - type: log
   enabled: true
-
-{% if loop.previtem is defined and value > loop.previtem %}
-        The value just increased!
-{% endif %}
-
+{% if LOGTYPE == "json" %}
   json.keys_under_root: true
+{% endif %}
   paths:
     - /var/log/cart.log
 
