@@ -25,8 +25,8 @@ filebeat.inputs:
   id: my-filestream-id
 
   # Change to true to enable this input configuration.
-  enabled: false
-
+  enabled: true
+  json.keys_under_root: true
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
     - /var/log/cart.log
