@@ -1,0 +1,9 @@
+- name: Coping Logstash Config file 
+  ansible.builtin.template:
+    src: logstash.conf
+    dest: /etc/rsyslog.d/conf.d/logstash.conf
+  
+- name: Restarting logstash 
+  ansible.builtin.systemd:
+    name: rsyslog   
+    state: restarted
