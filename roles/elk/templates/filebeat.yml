@@ -5,29 +5,18 @@ filebeat.inputs:
   paths:
     - /var/log/cart.log
 
-# ============================== Filebeat modules ==============================
-
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
 
-  # Set to true to enable config reloading
   reload.enabled: false
-
-  # Period on which files under path should be checked for changes
-  #reload.period: 10s
-
-# ======================= Elasticsearch template setting =======================
 
 setup.template.settings:
   index.number_of_shards: 1
-# =================================== Kibana ===================================
 
 setup.kibana:
-# ------------------------------ Logstash Output -------------------------------
+
 output.logstash:
-  # The Logstash hosts
   hosts: ["172.31.70.12:5044"]
-# ================================= Processors =================================
 processors:
   - add_host_metadata:
       when.not.contains.tags: forwarded
