@@ -73,6 +73,11 @@
     name: common 
     tasks_from: systemd-start-svc
 
+- name: Installing Filebeat
+  ansible.builtin.include_role:
+    name: elk 
+    tasks_from: filebeat
+
 - name: Configuing system name 
   ansible.builtin.include_role:
     name: common 
