@@ -70,8 +70,13 @@
 
 - name: Configuing the {{COMPONENT}} svc
   ansible.builtin.include_role:
-    name: common 
+    name: common  
     tasks_from: systemd-start-svc
+
+- name: Configuing rsyslog
+  ansible.builtin.include_role:
+    name: elk  
+    tasks_from: rsyslog
 
 - name: Installing Filebeat
   ansible.builtin.include_role:
