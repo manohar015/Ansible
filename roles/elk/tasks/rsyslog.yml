@@ -1,0 +1,4 @@
+- name: Coping rsyslog file 
+  ansible.builtin.template:
+    src: rsyslog.conf
+    dest: /etc/rsyslog.d/
