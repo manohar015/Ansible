@@ -13,8 +13,8 @@
     src: filebeat.yml 
     dest: /etc/filebeat/filebeat.yml
 
-- name: Starting MongoDB Service 
-  ansible.builtin.service:
-    name: mongod  
-    state: started
+- name: Starting filebeat
+  ansible.builtin.systemd:
+    name: filebeat  
+    state: restarted
     enabled: yes
