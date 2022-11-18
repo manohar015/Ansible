@@ -3,7 +3,10 @@
     name: nginx 
     state: present 
 
-
+- name: Coping nginx config 
+  ansible.builtin.templates:
+    src: mysql.repo 
+    dest: /etc/yum.repos.d/mongodb.repo  
 
 - name: Starting Nginx Service 
   ansible.builtin.service:
