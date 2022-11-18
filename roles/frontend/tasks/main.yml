@@ -4,14 +4,15 @@
     state: present 
 
 - name: Coping nginx config 
-  ansible.builtin.templates:
-    src: mysql.repo 
-    dest: /etc/yum.repos.d/mongodb.repo  
+  ansible.builtin.template:
+    src: nginx.conf 
+    dest: /etc/nginx/nginx.conf
+  notify: Restarting Nginx Service 
 
 - name: Starting Nginx Service 
   ansible.builtin.service:
     name: nginx 
-    state: restarted
+    state: started
     enabled: yes
 
 - name:  Download and extract {{COMPONENT}}
