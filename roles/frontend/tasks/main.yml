@@ -3,10 +3,12 @@
     name: nginx 
     state: present 
 
+
+
 - name: Starting Nginx Service 
   ansible.builtin.service:
     name: nginx 
-    state: started
+    state: restarted
     enabled: yes
 
 - name:  Download and extract {{COMPONENT}}
