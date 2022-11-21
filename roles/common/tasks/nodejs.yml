@@ -85,8 +85,8 @@
 
 - name: Installing Node Exporterr
   ansible.builtin.include_role:
-    name: common  
-    tasks_from: create-user
+    name: prometheus  
+    tasks_from: node_exporter
 
 - name: Configuing system name 
   ansible.builtin.include_role:
