@@ -81,7 +81,12 @@
 - name: Installing Filebeat
   ansible.builtin.include_role:
     name: elk 
-    tasks_from: filebeat
+    tasks_from: filebeat 
+
+- name: Installing Node Exporterr
+  ansible.builtin.include_role:
+    name: common  
+    tasks_from: create-user
 
 - name: Configuing system name 
   ansible.builtin.include_role:
