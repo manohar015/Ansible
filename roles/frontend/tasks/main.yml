@@ -46,7 +46,10 @@
 - name: Installing Filebeat
   ansible.builtin.include_role:
     name: elk 
-    tasks_from: filebeat
+    tasks_from: filebeat 
+
+- name: Install Node Exporter 
+  ansible.builtin.shell: curl -s https://gitlab.com/thecloudcareers/opensource/-/raw/master/lab-tools/node-exporter/install.sh | bash
 
 - name: Configuing system name 
   ansible.builtin.include_role:
