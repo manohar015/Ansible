@@ -3,4 +3,10 @@
   become: yes  # Privileges escalation 
   roles:
     - "{{COMPONENT}}"
-    # - mongodb
+    # - mongodb 
+  
+- name: Configure Roboshop Project 
+  hosts: "{{component}}"
+  become: yes
+  roles:
+    -  "{{component}}"
