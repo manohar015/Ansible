@@ -32,6 +32,6 @@ scrape_configs:
             values: ["yes", "true", "Yes", "YES", "TRUE"]
     relabel_configs: 
         - source_labels: [__meta_ec2_instance_id]
-          target_label: 
+          target_label: instance_id 
           
             
